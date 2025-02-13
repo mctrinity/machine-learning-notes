@@ -116,10 +116,10 @@ if x > 2:
 ---
 
 ## **🔹 Conclusion: Why PyTorch is Considered More Pythonic**
-✅ Uses **eager execution** (like regular Python).
-✅ Works **line-by-line**, no need for sessions or graphs.
-✅ **Tensors behave like NumPy arrays** (easy math operations).
-✅ Supports **normal Python loops and conditionals**.
+- ✅ Uses **eager execution** (like regular Python).
+- ✅ Works **line-by-line**, no need for sessions or graphs.
+- ✅ **Tensors behave like NumPy arrays** (easy math operations).
+- ✅ Supports **normal Python loops and conditionals**.
 
 💡 **PyTorch feels more like writing regular Python, while TensorFlow (before TF 2.0) felt more like a structured, lower-level framework.**
 
