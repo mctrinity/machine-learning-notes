@@ -1,15 +1,15 @@
 # Machine Learning Notes Repository
 
-Welcome to the **Machine Learning Notes Repository**! 🚀 This repository is a collection of structured notes covering various aspects of **machine learning**, including **TensorFlow workflow stages** and other important concepts.
+Welcome to the **Machine Learning Notes Repository**! 🚀 This repository is a collection of structured notes covering various aspects of **machine learning**, including **TensorFlow and PyTorch workflow stages**, as well as other important concepts.
 
 ## 📌 **What You'll Find Here**
 - 📖 **Structured Machine Learning Notes**
-- 🏗 **TensorFlow Workflow Stages Documentation**
+- 🏗 **TensorFlow & PyTorch Workflow Stages Documentation**
 - 🔢 **Mathematical Foundations of ML**
 - 🛠 **Hands-on Code Examples & Implementations**
 
 ## 🎯 **Purpose of This Repository**
-This repository serves as a **personal learning hub** for organizing key ML concepts, practical implementations, and TensorFlow workflows. Whether you're a beginner or an advanced ML practitioner, these notes will help reinforce fundamental and advanced topics.
+This repository serves as a **personal learning hub** for organizing key ML concepts, practical implementations, and TensorFlow/PyTorch workflows. Whether you're a beginner or an advanced ML practitioner, these notes will help reinforce fundamental and advanced topics.
 
 ## 🛠 **Getting Started**
 To clone this repository to your local machine, use the following command:
@@ -22,6 +22,7 @@ git clone https://github.com/your-username/machine-learning-notes.git
 📁 machine-learning-notes/
 │-- 📜 README.md  (This file)
 │-- 📜 tensorflow_stages.md  (TensorFlow workflow documentation)
+│-- 📜 pytorch_notes.md  (PyTorch workflow documentation)
 │-- 📁 notebooks/  (Jupyter notebooks & practical examples)
 │-- 📁 datasets/  (Sample datasets used for ML projects)
 │-- 📁 scripts/  (Python scripts for ML models)
