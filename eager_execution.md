@@ -75,10 +75,10 @@ tf.compat.v1.disable_eager_execution()
 ---
 
 ## **📌 Final Takeaway**
-- ✔ **Eager execution = run code dynamically (line-by-line) like normal Python.**  
-- ✔ **TensorFlow 1.x → Static Graphs (Slow, complex, but optimized for big models).**  
-- ✔ **TensorFlow 2.x → Eager Execution by default (Fast, flexible, user-friendly).**  
-- ✔ **PyTorch has always used eager execution.**  
+✔ **Eager execution = run code dynamically (line-by-line) like normal Python.**  
+✔ **TensorFlow 1.x → Static Graphs (Slow, complex, but optimized for big models).**  
+✔ **TensorFlow 2.x → Eager Execution by default (Fast, flexible, user-friendly).**  
+✔ **PyTorch has always used eager execution.**  
 
 🚀 Happy Coding with TensorFlow!
 
