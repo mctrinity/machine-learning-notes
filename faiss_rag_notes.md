@@ -94,31 +94,44 @@ FAISS (**Facebook AI Similarity Search**) and RAG (**Retrieval-Augmented Generat
 
 ---
 
-## **🔹 FAISS vs. RAG: Key Differences**
-| **Feature**  | **FAISS** | **RAG** |
-|-------------|----------|---------|
-| **Purpose**  | Fast similarity search for embeddings | Uses retrieval to enhance AI-generated responses |
-| **Retrieval Role** | Finds similar documents efficiently | Uses retrieval (often powered by FAISS) before generating text |
-| **Use Case** | Search engines, recommendation systems | AI-powered Q&A, chatbots, contextual AI |
-| **Data Type** | Works with vector embeddings (text, images, etc.) | Uses retrieved documents to enhance NLP models |
+## **🔹 Example: FAISS + RAG with Sentence-Transformers**
+```python
+from sentence_transformers import SentenceTransformer
+import faiss
+import numpy as np
 
----
+# Load a Sentence Transformer model
+model = SentenceTransformer("all-MiniLM-L6-v2")
 
-## **🔹 Example: FAISS + RAG in Action**
-**Use Case: AI-Powered Q&A System**  
-1️⃣ **Index Knowledge Base** → Convert all documents into embeddings and store them in FAISS.  
-2️⃣ **Retrieve Documents** → Given a query, FAISS finds the most relevant documents.  
-3️⃣ **Pass to RAG Model** → The retrieved documents are fed into a **Transformer model** (e.g., GPT, BERT, T5).  
-4️⃣ **Generate Response** → The AI model generates a well-informed response using the retrieved knowledge.  
+# Example documents
+documents = ["FAISS is a library for efficient similarity search.",
+             "RAG is a retrieval-augmented generation model.",
+             "Sentence transformers can generate embeddings for text."]
 
-💡 **FAISS makes retrieval fast, and RAG makes the response accurate.**  
+# Convert text to embeddings
+embeddings = model.encode(documents, convert_to_numpy=True)
+
+# Create a FAISS index
+dimension = embeddings.shape[1]
+index = faiss.IndexFlatL2(dimension)
+index.add(embeddings)
+
+# Query example
+query_text = "What is FAISS?"
+query_embedding = model.encode([query_text], convert_to_numpy=True)
+distances, indices = index.search(query_embedding, k=1)
+
+# Retrieve and display the most relevant document
+print(f"Most relevant document: {documents[indices[0][0]]}")
+```
+💡 **This example uses FAISS and Sentence-Transformers to retrieve relevant documents before passing them to a RAG model.**
 
 ---
 
 ## **📌 Final Takeaway**
 - **FAISS and RAG work together to build knowledge-aware AI models.**  
 - **FAISS provides fast retrieval, while RAG enhances AI generation with retrieved knowledge.**  
-- **This combination improves accuracy, reduces hallucination, and enables AI-driven search engines and chatbots.**  
+- **Sentence-Transformers can be used to create document embeddings for FAISS indexing.**  
 
 🚀 Start building intelligent AI-powered search and generation models today!
 
