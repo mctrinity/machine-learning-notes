@@ -1,4 +1,4 @@
-# TensorFlow Cheat Sheet
+# TensorFlow Cheat Sheet (For TensorFlow 2.x)
 
 ## **1. Tensor Operations**
 
@@ -195,3 +195,9 @@ callback = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=5)
 # Save the best model version during training
 checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath='model.h5', save_best_only=True)
 ```
+
+---
+
+### **Note:**
+
+This cheat sheet is specifically for **TensorFlow 2.x** and does not use `tf.Session()`, as TensorFlow 2.x supports **eager execution by default**.
